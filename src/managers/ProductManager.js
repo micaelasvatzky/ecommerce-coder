@@ -1,5 +1,4 @@
 import fs from "fs";
-import path from "path"; //otro módulo nativo
 import __dirname from "../../dirname.js";
 
 export class ProductManager {
@@ -41,7 +40,10 @@ export class ProductManager {
 
   async addProduct(product) {
     try {
-      const { title, desc, price, thumbnail, code, stock } = product; //se desestructura para usar solo la info necesaria
+
+      await this.getProducts();
+      
+      const { title, desc, price, thumbnail, code, stock, category, status } = product; //se desestructura para usar solo la info necesaria
 
       const newProduct = {
         id: this.products.length + 1,
@@ -51,6 +53,8 @@ export class ProductManager {
         thumbnail,
         code,
         stock,
+        category,
+        status
       };
 
       const productExist = this.products.find(
@@ -68,6 +72,9 @@ export class ProductManager {
       this.products.push(newProduct);
 
       await fs.promises.writeFile(this.pathFile, JSON.stringify(this.products));
+
+      return this.products;
+
     } catch (error) {
       console.log(`Error: ${error.message}`);
     }
@@ -115,7 +122,7 @@ const products = new ProductManager();
 
 //products.getProducts();
 
-products.addProduct({
+/*products.addProduct({
   title: "Producto 1",
   desc: "Descripcion del producto 1",
   price: 100,
@@ -123,6 +130,8 @@ products.addProduct({
     "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
   code: "ABc122",
   stock: 10,
+  category: "Ropa",
+  status: true
 });
 
 products.addProduct({
@@ -133,6 +142,8 @@ products.addProduct({
     "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
   code: "ABc123",
   stock: 5,
+  category: "Ropa",
+  status: true,
 });
 
 products.addProduct({
@@ -143,8 +154,10 @@ products.addProduct({
     "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
   code: "ABc124",
   stock: 5,
+  category: "Ropa",
+  status: true
 });
-
+*/
 //products.getProductById(2);
 //products.updateProduct(2, {title: "Nuevo título", price: 999});
 //products.deleteProduct(2);
