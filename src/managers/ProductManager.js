@@ -121,8 +121,8 @@ export class ProductManager {
 const products = new ProductManager();
 
 //products.getProducts();
-
-/*products.addProduct({
+/*
+products.addProduct({
   title: "Producto 1",
   desc: "Descripcion del producto 1",
   price: 100,
@@ -152,12 +152,9 @@ products.addProduct({
   price: 200,
   thumbnail:
     "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
-  code: "ABc124",
+  code: "ABc125",
   stock: 5,
   category: "Ropa",
   status: true
 });
 */
-//products.getProductById(2);
-//products.updateProduct(2, {title: "Nuevo título", price: 999});
-//products.deleteProduct(2);
