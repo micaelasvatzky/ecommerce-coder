@@ -22,6 +22,19 @@ export class CartManager {
     }
   }
 
+  async createCart(){
+    await this.getCarts();
+
+    const newCart = {
+      id: this.carts.length + 1,
+      products: []
+    };
+
+    this.carts.push(newCart);
+    await fs.promises.writeFile(this.pathFile, JSON.stringify(this.carts));
+    return this.carts;
+  }
+
   async getCartById(id) {
     try {
       await this.getCarts(); //primero llama a los productos, dsp los busca por id
@@ -33,8 +46,7 @@ export class CartManager {
       if (!findCart) throw new Error("Product not found");
 
       return findCart;
-
-      console.log(findCart);
+      
     } catch (error) {
       console.log(`Error: ${error.message}`);
     }
@@ -63,7 +75,16 @@ export class CartManager {
     }
   }
 
+  async updateCart(updatedCart) {
+    const cartIndex = this.carts.findIndex(cart => cart.id === updatedCart.id);
+    if (cartIndex !== -1) {
+        this.carts[cartIndex] = updatedCart;
+        await fs.promises.writeFile(this.pathFile, JSON.stringify(this.carts));
+    }
+}
+
 }
 
 
 const carts = new CartManager();
+
