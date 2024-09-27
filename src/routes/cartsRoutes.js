@@ -35,33 +35,19 @@ router.get("/:cid", userRoleMiddleware, async (req, res) =>{
 
 });
 
-router.post("/:cid/product/:pid", userRoleMiddleware, async (req, res) => {
-    const { cid, pid } = req.params;
+router.post("/:cid/products/:pid", async (req,res) => { 
+  const { cid, pid } = req.params;
+  // const body = req.body;
+  const product =  await productManager.getProductById(Number(pid));
 
-    const product = await productManager.getProductById(Number(pid));
-    if (!product) {
-        return res.status(404).json({ message: "Product not found" });
-    }
+  if(!product)  return res.status(404).json({ status: "error", message: "Product not found" });
+   console.log(product)
 
-    const cart = await cartManager.getCartById(Number(cid));
-    if(!cart) {
-        return res.status(404).json({message: "Cart not found"});
-    }
+  await cartManager.addProductToCart(cid, pid);
 
-    const productIndex = cart.products.findIndex(p => p.product === Number(pid)); // Ver si el producto existe en el carrito
+  res.status(200).json({status:"ok", payload:`Product ${pid} added to cart`});
 
-    if (productIndex !== -1) {
-      cart.products[productIndex].quantity += 1;
-    } else {
-      cart.products.push({
-        product: Number(pid), // Solo el ID del producto
-        quantity: 1
-      });
-    }
-
-    await cartManager.updateCart(cart);
-    res.json({ message: "Product added to cart", cart });
-
-  });
+})
 
 export default router;
+
