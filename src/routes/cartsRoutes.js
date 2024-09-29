@@ -37,13 +37,15 @@ router.get("/:cid", userRoleMiddleware, async (req, res) =>{
 
 router.post("/:cid/products/:pid", async (req,res) => { 
   const { cid, pid } = req.params;
-  // const body = req.body;
+  
   const product =  await productManager.getProductById(Number(pid));
 
   if(!product)  return res.status(404).json({ status: "error", message: "Product not found" });
    console.log(product)
 
+
   await cartManager.addProductToCart(cid, pid);
+
 
   res.status(200).json({status:"ok", payload:`Product ${pid} added to cart`});
 
