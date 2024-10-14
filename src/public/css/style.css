@@ -1,19 +1,214 @@
-h1{
-    color: red;
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.contenedorCards{
+h1 {
+  color: red;
+  text-align: center;
+}
+
+.nodisp{
+    display: none;
+}
+
+
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.card{
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    margin: 10px;
-    padding: 10px;
-    min-width: 200px;
+/* Estilo de las cards */
+
+
+.contenedorCards {
+    width: 650px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+
+    margin: 20px;
 }
+
+.card {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  width: 150px;
+  height: 200px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+.card-img {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color-sub);
+}
+
+.card-divider {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.card-price span {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color-sub);
+}
+
+.card-btn {
+  height: 35px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  padding: 0 10px;
+  transition: all 0.3s;
+  font-weight: 900;
+}
+
+.card-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+  transition: all 0.3s;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn:hover {
+  border: 2px solid var(--main-focus);
+}
+
+.card-btn:hover svg {
+  fill: var(--main-focus);
+}
+
+.card-btn:active {
+  transform: translateY(3px);
+}
+
+/* Estilos del formulario */
+
+form {
+    width: 400px; 
+    background-color: #fff; 
+    border: 2px solid #323232; 
+    border-radius: 5px; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px 20px 10px 20px; 
+    margin: 20px; 
+  }
+  
+  form ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  form li {
+    margin-bottom: 15px;
+  }
+  
+  
+  label {
+    display: block; 
+    font-weight: 500; 
+    color: #323232; 
+    margin-bottom: 5px; 
+  }
+  
+  
+  input[type="text"] {
+    width: 95%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    color: #323232; 
+    transition: border-color 0.3s; 
+  }
+  
+  
+  input[type="text"]:focus {
+    border-color: #2d8cf0; 
+    outline: none; 
+  }
+  
+  
+  form button, #btnAdd {
+    width: 100%; 
+    margin-top: 15px;
+    padding: 10px; 
+    background-color: #2d8cf0; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+  }
+  
+  
+#btnAdd{
+    width: 25%;
+}
+
+  button:hover {
+    background-color: #1a6bb8; 
+  }
+

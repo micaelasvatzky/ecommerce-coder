@@ -35,4 +35,14 @@ io.on("connection", async(socket)=> {
   console.log("Un cliente se conectó");
 
   socket.emit("productos", await productManager.getProducts());
-})
+
+  socket.on("newProduct", async (product) => {
+    await productManager.addProduct(product);
+  });
+
+  socket.on("deleteProduct", async (productId) =>{
+    await productManager.deleteProduct(Number(productId));
+    await productManager.getProducts();
+  })
+
+});

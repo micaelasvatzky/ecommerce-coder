@@ -43,7 +43,7 @@ export class ProductManager {
 
       await this.getProducts();
       
-      const { title, desc, price, thumbnail, code, stock, category, status } = product; //se desestructura para usar solo la info necesaria
+      const { title, desc, price, thumbnail, code, stock, category } = product; //se desestructura para usar solo la info necesaria
 
       const newProduct = {
         id: this.products.length + 1,
@@ -54,7 +54,7 @@ export class ProductManager {
         code,
         stock,
         category,
-        status
+        status: true
       };
 
       const productExist = this.products.find(
