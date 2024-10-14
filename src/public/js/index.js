@@ -1,5 +1,5 @@
 const socket = io();
-//Instancia del lado del cliente}
+//Instancia del lado del cliente
 const deleteButton = document.getElementsByClassName("delete");
 const saveProduct = document.getElementById("saveProduct");
 const btnAdd = document.getElementById("btnAdd");
