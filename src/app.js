@@ -2,7 +2,9 @@ import express from "express";
 import router from "./routes/index.js";
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
+
 const port = 8080;
+import "./database.js";
 
 
 const app = express();
@@ -28,7 +30,7 @@ const httpServer = app.listen(port, () => {
 const io = new Server(httpServer);
 
 //Debo traer el array de productos:
-import { ProductManager } from "./managers/ProductManager.js";
+import ProductManager from "./managers/product.manager.js";
 const productManager = new ProductManager();
 
 io.on("connection", async(socket)=> {
@@ -38,11 +40,14 @@ io.on("connection", async(socket)=> {
 
   socket.on("newProduct", async (product) => {
     await productManager.addProduct(product);
+
+    io.emit("productos", await productManager.getProducts());
   });
 
   socket.on("deleteProduct", async (productId) =>{
-    await productManager.deleteProduct(Number(productId));
-    await productManager.getProducts();
-  })
+    await productManager.deleteProduct(productId);
+
+    io.emit("productos", await productManager.getProducts());
+  });
 
 });

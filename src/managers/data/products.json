@@ -1,1 +1,303 @@
-[{"id":1,"title":"Producto 3","desc":"Descripcion del producto 1","price":200,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABc124","stock":5,"category":"Ropa","status":true},{"id":2,"title":"Producto 1","desc":"Descripcion del producto 1","price":100,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABc122","stock":10,"category":"Ropa","status":true},{"id":3,"title":"Producto 3","desc":"Descripcion del producto 1","price":200,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABc125","stock":5,"category":"Ropa","status":true},{"id":4,"title":"Producto 4","desc":"Descripción del producto 1","price":"400","thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABD234","stock":"8","category":"Ropa","status":true}]
+[
+    {
+      "title": "Camisa de Manga Larga",
+      "desc": "Camisa de algodón suave y cómoda.",
+      "price": 250,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/shirt-128.png",
+      "code": "PRD001",
+      "stock": 20,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Pantalones Cortos",
+      "desc": "Pantalones cortos de tela ligera para el verano.",
+      "price": 200,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/shorts-128.png",
+      "code": "PRD002",
+      "stock": 15,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Zapatos de Cuero",
+      "desc": "Zapatos elegantes de cuero genuino.",
+      "price": 800,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/shoes-128.png",
+      "code": "PRD003",
+      "stock": 10,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Chaqueta de Invierno",
+      "desc": "Chaqueta abrigada para climas fríos.",
+      "price": 1200,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/jacket-128.png",
+      "code": "PRD004",
+      "stock": 5,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Vestido de Fiesta",
+      "desc": "Elegante vestido para ocasiones especiales.",
+      "price": 600,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/dress-128.png",
+      "code": "PRD005",
+      "stock": 12,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Gorra Deportiva",
+      "desc": "Gorra ajustable para actividades al aire libre.",
+      "price": 150,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/cap-128.png",
+      "code": "PRD006",
+      "stock": 30,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Pizza Margarita",
+      "desc": "Deliciosa pizza con tomate y mozzarella.",
+      "price": 300,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/pizza-128.png",
+      "code": "PRD007",
+      "stock": 50,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Hamburguesa Clásica",
+      "desc": "Hamburguesa jugosa con carne, lechuga y tomate.",
+      "price": 350,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/hamburger-128.png",
+      "code": "PRD008",
+      "stock": 40,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Sushi Variado",
+      "desc": "Caja de sushi con diferentes variedades.",
+      "price": 700,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/sushi-128.png",
+      "code": "PRD009",
+      "stock": 20,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Ensalada César",
+      "desc": "Ensalada fresca con pollo, lechuga y aderezo.",
+      "price": 250,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/salad-128.png",
+      "code": "PRD010",
+      "stock": 30,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Cerveza Artesanal",
+      "desc": "Cerveza de producción local con sabores únicos.",
+      "price": 120,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/beer-128.png",
+      "code": "PRD011",
+      "stock": 100,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Vino Tinto",
+      "desc": "Vino tinto de la mejor selección.",
+      "price": 300,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/wine-128.png",
+      "code": "PRD012",
+      "stock": 50,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Agua Mineral",
+      "desc": "Botella de agua mineral con gas.",
+      "price": 50,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/water-128.png",
+      "code": "PRD013",
+      "stock": 200,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Jugo Natural",
+      "desc": "Jugo natural de frutas frescas.",
+      "price": 150,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/juice-128.png",
+      "code": "PRD014",
+      "stock": 80,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Smartphone",
+      "desc": "Teléfono inteligente con pantalla táctil.",
+      "price": 1200,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/smartphone-128.png",
+      "code": "PRD015",
+      "stock": 10,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Laptop Gaming",
+      "desc": "Laptop potente para jugadores con alta capacidad.",
+      "price": 1500,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/laptop-128.png",
+      "code": "PRD016",
+      "stock": 5,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Auriculares Inalámbricos",
+      "desc": "Auriculares Bluetooth con cancelación de ruido.",
+      "price": 300,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/headphones-128.png",
+      "code": "PRD017",
+      "stock": 25,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Reloj Inteligente",
+      "desc": "Reloj inteligente con monitor de salud.",
+      "price": 600,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/smart_watch-128.png",
+      "code": "PRD018",
+      "stock": 15,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Televisor 4K",
+      "desc": "Televisor de alta definición 4K.",
+      "price": 2500,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/tv-128.png",
+      "code": "PRD019",
+      "stock": 8,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Cámara Digital",
+      "desc": "Cámara digital con lentes intercambiables.",
+      "price": 1800,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/camera-128.png",
+      "code": "PRD020",
+      "stock": 4,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Camiseta de Deporte",
+      "desc": "Camiseta transpirable para actividades deportivas.",
+      "price": 200,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/tshirt-128.png",
+      "code": "PRD021",
+      "stock": 25,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Bolso de Mano",
+      "desc": "Bolso elegante de mano para llevar lo esencial.",
+      "price": 450,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/fashion-20/64/bag-128.png",
+      "code": "PRD022",
+      "stock": 10,
+      "category": "Ropa",
+      "status": true
+    },
+    {
+      "title": "Snack de Frutas",
+      "desc": "Barra de snack de frutas naturales.",
+      "price": 80,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/fruits-128.png",
+      "code": "PRD023",
+      "stock": 100,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Bebida Energética",
+      "desc": "Bebida energética para recuperar energía.",
+      "price": 150,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/energy_drink-128.png",
+      "code": "PRD024",
+      "stock": 60,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Cafetera Espresso",
+      "desc": "Cafetera para preparar espresso en casa.",
+      "price": 450,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/coffee_machine-128.png",
+      "code": "PRD025",
+      "stock": 20,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Galletas de Chocolate",
+      "desc": "Deliciosas galletas rellenas de chocolate.",
+      "price": 150,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/cookies-128.png",
+      "code": "PRD026",
+      "stock": 100,
+      "category": "Comida",
+      "status": true
+    },
+    {
+      "title": "Té Verde",
+      "desc": "Té verde premium en bolsa.",
+      "price": 50,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/tea-128.png",
+      "code": "PRD027",
+      "stock": 80,
+      "category": "Bebida",
+      "status": true
+    },
+    {
+      "title": "Monitor Full HD",
+      "desc": "Monitor de alta resolución para trabajo y juego.",
+      "price": 800,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/monitor-128.png",
+      "code": "PRD028",
+      "stock": 6,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Sillas Gamer",
+      "desc": "Silla ergonómica para largas sesiones de juego.",
+      "price": 1500,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/electronics-2-2/64/gaming_chair-128.png",
+      "code": "PRD029",
+      "stock": 4,
+      "category": "Electrónica",
+      "status": true
+    },
+    {
+      "title": "Tacos de Tofu",
+      "desc": "Tacos vegetarianos con tofu y verduras frescas.",
+      "price": 180,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/food-16/64/tacos-128.png",
+      "code": "PRD030",
+      "stock": 70,
+      "category": "Comida",
+      "status": true
+    }
+  ]
+  

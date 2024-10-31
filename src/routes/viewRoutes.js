@@ -2,18 +2,29 @@ import { Router } from "express";
 const router = Router();
 
 //Importar el product manager y llamamos al metodo que corresponda
-import { ProductManager } from "../managers/ProductManager.js";
+import ProductManager from "../managers/product.manager.js";
 const productsManager = new ProductManager();
 
-router.get("/product", async (req, res) => {
+import CartManager from "../managers/cart.manager.js";
+const cartManager = new CartManager();
+
+router.get("/products", async (req, res) => {
     const productos = await productsManager.getProducts();
-    //Recupero los productos del json y se los tengo q enviar a la vista home
-
     res.render("home", {productos});
-    //Renderizamos la vista home y a la vez le enviamos un array con todos los productos del inventario
-
-    //Tambien se puede trabajar con un try-catch para capturar algun error
 });
+
+router.get("/products/:pid", async(req, res) => {
+    const { pid } = req.params;
+    const product = await productsManager.getProductById(pid);
+    res.render('product', { product });
+});
+
+router.get('/carts/:cid', async (req, res) => {
+    const { cid } = req.params;
+    const cart = await cartManager.getCartById(cid);
+    res.render('cart', { cart });
+  });
+  
 
 router.get("/realtimeproducts", async (req, res) => {
     const productos = await productsManager.getProducts();

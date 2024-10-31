@@ -11,7 +11,7 @@ router.use("/carts", cartsRoutes);
 
 router.use("/products", productsRoutes);
 
-router.use("/", viewRoutes);
+router.use("/views", viewRoutes);
 
 
 router.use(userRoleMiddleware);
